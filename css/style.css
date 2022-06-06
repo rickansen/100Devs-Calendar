@@ -1,0 +1,372 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+/* Box Model Hack */
+* {
+  box-sizing: border-box;
+}
+
+/* Clear fix hack */
+.clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
+
+.clear {
+	clear: both;
+}
+
+html,
+body {
+	width: 100%;
+	height: 100%;
+	font-size: 100%;
+	font-family: 'Montserrat', sans-serif;
+}
+
+/* 
+=========================
+Navigation Bar
+=========================
+*/
+
+
+
+.nav {
+	height: 50px;
+	display: flex;
+	justify-content: space-around;
+	line-height: 50px;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	background: #034b4a;
+}
+
+nav ul {
+	display: flex;
+	justify-content: space-around;
+}
+
+nav img {
+	height: 50px;
+	padding: 5px 0;
+}
+
+
+.nav-item-1 {
+	flex-basis: 25%;	
+	padding-left: 3%;
+}
+
+.nav-item-2 {
+	flex-basis: 50%;
+}
+
+.nav-item-3 {
+	flex-basis: 25%;
+	padding-right: 3%;
+	text-align: end;
+}
+
+.contribute {
+	line-height: 50px;
+	padding: 5px 10px;
+	background: #e47b67;
+	border-radius: 5px;
+}
+
+nav ul li a,
+.nav-item-3 a{
+	text-decoration: none;
+	color: white;
+}
+
+/* 
+=========================
+Main Section
+=========================
+*/
+
+main {
+	height: 100vh;
+}
+.main {
+	display: flex;
+	height: 70vh;
+	margin: calc(50px + 5vw) 5vw 5vw 5vw;
+	justify-content: center;
+	padding: 0 10%;
+}
+
+
+main img {
+	max-width: 100%;
+	max-height: 100%;
+	margin-right: 5%;
+}
+
+.main-img {
+	align-self: center;
+	flex-basis: 40%;
+}
+
+.main-banner {
+	margin-left: 5%;
+	align-self: center;
+	flex-basis: 60%;
+}
+
+h1 {
+	font-size: 3rem;
+	margin: 5% 0;
+}
+
+
+/* 
+=========================
+Container
+=========================
+*/
+
+.container {
+	margin: 5vw;
+	padding: 3vw;
+	display: flex;
+	justify-content: space-around;
+}
+
+.container > * {
+	margin: 0 3%;
+}
+
+/* 
+=========================
+Calendar
+=========================
+*/
+
+h3 {
+	text-align: center;
+	margin: 3% 0 1% 0;
+	font-size: 1.5rem;
+	font-weight: bold;
+}
+
+h4 {
+	text-align: center;
+	font-size: 1.1rem;
+}
+
+#calendar {
+	width: 350px;
+	padding: 3%;
+	flex-basis: 40%;
+	background: #a5be92;
+}
+
+
+.day {
+	display: flex;
+	line-height: 50px;
+	text-align: center;
+}
+
+.cell {
+	width: 100%;
+	flex-basis: 1;
+	height: 50px;
+	justify-items: center;
+	align-items: center;
+	margin: 2px;
+}
+
+.weekday {
+	width: 100%;
+	height: 50px;
+	justify-items: center;
+	align-items: center;
+	font-size: .8rem;
+}
+
+.excess {
+	color: #8b915b;
+}
+
+.classday {
+	background-color: #cee6ae;
+}
+
+.office-hours {
+	background-color:  #19382d;
+	color: #a5be92;
+}
+
+.class-number {
+	display: inline;
+	position: absolute;
+	border-radius: 50%;
+	background: #405138;
+	height: 30px;
+	width: 30px;
+	top: -12.5px;
+	right: -12.5px;
+	line-height: 30px;
+	color: #a5be92;
+	font-size: .8rem;
+}
+
+.hide {
+	display: none;
+}
+
+.show {
+	display: block;
+}
+section.classday:hover .hide {
+	display: inline;
+}
+
+.cell.classday:hover,
+.cell.office-hours:hover {
+	transform: scale(1.1);
+	font-weight: bold;
+}
+
+.focus {
+	font-weight: bold;
+	background-color: #8b915b;
+}
+
+/* 
+=========================
+Screen
+=========================
+*/
+
+.screen {
+	flex-basis: 60%;
+	padding: 3%;
+	background: #e47b67;
+}
+
+.screen h3 {
+	margin-bottom: 3%;
+}
+.scroll {
+	overflow-y: scroll;
+    scrollbar-width: none; 
+    -ms-overflow-style: none;
+	height: 400px;
+}
+
+.scroll-item{
+	margin: 8% 0;
+}
+
+.scroll-title {
+	font-size: 1.2rem;
+	font-weight: bold;
+	margin: 3% 0;
+}
+
+.scroll::-webkit-scrollbar { 
+    width: 0;
+    height: 0;
+}
+
+.iframe-container {
+	width: 100%;
+	margin: 3% 0;
+}
+.iframe {
+	width: 100%;
+	height: auto;
+	aspect-ratio: 2/1.14;
+}
+
+.assignment-item,
+.submission-form {
+	margin: 5% 0 ;
+}
+
+.assignment-item a,
+.submission-form a {
+	text-decoration: none;
+	color: #034b4a;
+}
+
+.assignment-item a:hover,
+.submission-form a:hover {
+	font-weight: bold;
+}
+.assignment-item a:active,
+.submission-form a:active {
+	color: white;
+}
+
+/* 
+=========================
+Footer
+=========================
+*/
+
+footer {
+	height: 200px;
+	color: white;
+	padding: 3%;
+	background-color: #19382d;
+
+	bottom: 0;
+	width: 100%;
+}
